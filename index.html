@@ -1,0 +1,1247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        body {
+            position: relative;
+            overflow-x: hidden;
+            scroll-snap-type: y mandatory;
+        }
+
+        .logo-container {
+            width: fit-content;
+        }
+
+        .logo {
+            width: 250px;
+        }
+
+        .main-video-2 {
+            display: none;
+        }
+          .main-video {
+            /* transform: translateY(-110px); */
+            width: 100%;
+            max-height: 100vh;
+            object-fit: cover;
+
+        }
+
+        .icons {
+            width: 30px;
+            height: 30px;
+            fill: green !important;
+        }
+
+        .nav-bar {
+            height: fit-content;
+            overflow: hidden;
+            padding: 10px 50px 10px 50px;
+            position: fixed;
+            top: 0;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(to bottom, #94bb41, #f9fcc500);
+
+        }
+
+        .gradient {
+            width: 100%;
+            height: 90px;
+            position: absolute;
+            top: 0;
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), #94bb41);
+            transform: translateY(-88px);
+            clip-path: inset(-110% 0% 0% 0%);
+        }
+
+        .topcontainer {
+            z-index: -10;
+        }
+
+        .main-container {
+            height: fit-content;
+            width: 100%;
+            /* position: absolute; */
+        }
+
+        @media (max-width:576px) {
+            .nav-bar {
+                padding: 10px 20px 10px 20px;
+                z-index: 9;
+            }
+
+            .main-video-2 {
+                display: block;
+                object-fit: cover;
+                max-height: 100vh;
+            }
+
+            .main-container {
+                overflow-x: hidden;
+            }
+
+            .main-video {
+                display: none;
+            }
+
+            .tea-header {
+                font-size: 15px !important;
+            }
+
+            .text-exp {
+                font-size: 15px !important;
+            }
+
+            .icons {
+                width: 20px;
+                height: 20px;
+                display: none;
+            }
+
+            .logo {
+                width: 100px;
+            }
+
+            .menu-text {
+                font-size: 19px !important;
+                /* color: green !important; */
+            }
+
+            .section-4 {
+                padding: 10px !important;
+                padding-bottom: 20vh !important;
+                /* height: !important; */
+                background-origin: center !important;
+                overflow: visible;
+                top: -200% !important; 
+                /* position: static !important; */
+                
+            }
+
+            .image-container {
+                width: 90vw !important;
+                height: 45vw !important;
+            }
+
+            .section-2-ko-container {
+                flex-direction: column-reverse !important;
+
+            }
+
+            .tea-image {
+                width: 200px;
+            }
+
+            .section-2-explanation {
+                width: 100% !important;
+                padding: 10px;
+            }
+
+            .our-best {
+                padding: 0 !important;
+            }
+
+            .sdbchs {
+                width: 100% !important;
+            }
+
+            .tea-cup {
+                width: 90%
+            }
+
+            .teacup {
+                width: 100% !important;
+            }
+
+            .section-3 {
+                justify-content: space-evenly !important;
+            }
+
+            .blog-container {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .cards-container {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .card-blog {
+                width: 90vw !important;
+                height: max-content !important;
+                padding: 10px !important;
+            }
+
+            .image-container {
+                width: 90vw !important;
+                height: 45vw !important;
+            }
+
+            .image-container-blog {
+                height: 50vw !important;
+                width: 100% !important;
+            }
+
+            .image-ho {
+                border-radius: 5px !important;
+            }
+
+            .our-photo-card {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 130px;
+            }
+
+            .stars{
+                width: 10% !important;
+                height: 10% !important;
+            }
+
+
+            .image-container-image {
+                width: 75vw !important;
+                height: 50vw !important;
+                /* margin: 20px; */
+            }
+
+            .our-testimonials {
+                font-size: 20px !important;
+            }
+
+            .testimonials-cards-container{
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 30px !important;
+            }
+
+            .card-testimonial {
+                width: 90% !important;
+                padding: 15px !important;
+                border-radius: 15px !important;
+        }
+        .footer-contents{
+            display: flex !important;
+            align-items: center;
+            text-align: center;
+            flex-direction: column !important;
+            gap: 20px !important;
+        }
+
+        .heading-footer {
+            display: block !important;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+        }
+        .dhc{
+       display: none !important;
+        }
+
+
+        .icons-container {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .footer-contents ul{
+            font-size: 20px;
+        }
+
+                .footer-contents h2{
+            font-size: 30px !important;
+        }
+
+        .footer-contents .logo{
+            width: 300px !important;
+        }
+
+      
+    }
+
+    @media (min-width:577px) and (max-width:915px) {
+
+
+        .testimonials-cards-container{
+            /* flex-direction: column !important; */
+            display: flex;
+            flex-wrap: wrap ;
+            width: 80% !important;
+            /* align-items: center !important; */
+            gap: 30px !important;
+            justify-content: space-between !important;
+            /* padding: 0 20px; */
+            margin: 0 auto !important;
+        }
+
+        .card-testimonial{
+            width: 45% !important;
+        }
+    }
+
+        .text-outside {
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgb(38, 255, 0));
+            /* background: #fff; */
+            /* transform: translateY(39px); */
+        }
+
+        .section-2 {
+            background: #94bb41;
+            height: 110vh;
+            padding-bottom: 170px;
+            z-index: 2;
+        }
+
+        .tea-header {
+            /* font-size: 50px !important; */
+            color: #ce4c07;
+        }
+
+        .text-exp {
+            font-size: 22px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+            color: #181307;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 5;
+            overflow: hidden;
+        }
+
+
+        .button {
+            padding: 10px 30px 10px 30px;
+            background-color: #ce4c07;
+            width: fit-content;
+            border-radius: 50px;
+            color: white;
+            font-size: 20px;
+            font-family: 'poppins', sans-serif !important;
+            font-weight: 100 !important;
+        }
+
+        .digitaltea {
+            /* height: 85vh; */
+            max-width: 100%;
+
+        }
+
+        .tea-text {
+            font-size: 40px !important;
+            top: 35vh;
+        }
+
+        .gradient-2 {
+            width: 110vw;
+            height: 95px;
+            position: absolute !important;
+            top: 0;
+            background: linear-gradient(to bottom, rgba(246, 244, 244, 0), #f9fcc5);
+            transform: rotate(-5.5deg) translateY(-157%);
+            z-index: 90;
+        }
+
+        .our-best {
+            font-size: 60px !important;
+            font-weight: 700;
+            padding-bottom: 7%;
+            margin: 0 !important;
+        }
+
+        .triangle-container {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            transform: translateY(-100%);
+            filter: drop-shadow(0 -15px 20px #e5f75e);
+            z-index: 4;
+            clip-path: inset(-100% 0 0 0);
+        }
+
+        .triangle {
+
+            width: 100% !important;
+            height: 100% !important;
+            background: linear-gradient(to right, rgb(221, 255, 109), rgb(254, 254, 254));
+            clip-path: polygon(0% 80%, 100% 0%, 100% 101%, 0% 101%) !important;
+        }
+
+        .section-3 {
+            min-height: 110vh;
+            color: #3e3010 !important;
+            /* overflow-x: hidden !important; */
+            background: linear-gradient(to right, rgb(221, 255, 109), rgb(254, 254, 254));
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-bottom: 10vh;
+            z-index: 3;
+        }
+
+
+
+        @keyframes scale-up-down {
+            0% {
+                transform: scale(1) rotate(-10deg);
+            }
+
+            100% {
+                transform: scale(1.6);
+            }
+        }
+
+        @keyframes scale-up-down2 {
+            0% {
+                transform: scale(1) rotate(10deg);
+                ;
+            }
+
+            100% {
+                transform: scale(1.6);
+            }
+        }
+
+        @keyframes no-scale {
+            0% {
+                transform: rotate(40deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        .chiyappati {
+            top: -11%;
+            animation: scale-up-down 2s ease-in-out infinite alternate;
+            transform-origin: center;
+            /* transform: translateX(100px); */
+            right: 30%;
+        }
+
+        .hola-kei {
+            top: -11%;
+            left: 30%;
+            animation: scale-up-down2 2s ease-in-out infinite alternate;
+            transform-origin: center;
+        }
+
+        .patta {
+            z-index: 100;
+            animation: no-scale 2s ease-in-out infinite alternate;
+            transform-origin: center;
+            top: -8%;
+            right: 45%;
+        }
+
+        /* 1. The Keyframes (Clean and Corrected) */
+        @keyframes fade-in-left {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-in-right {
+            0% {
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* 2. Apply the animations with a DELAY */
+        .tea-image {
+            opacity: 0;
+            /* name | duration | timing | delay | fill-mode */
+            animation: fade-in-left 1s ease-out 0.5s forwards;
+        }
+
+        .section-2-explanation {
+            opacity: 0;
+            animation: fade-in-right 1s ease-out 0.8s forwards;
+            /* Starts slightly after the image */
+        }
+
+        .section-4 {
+            min-height: 100vh;
+            background: url('./locationnbg.png');
+            background-size: cover;
+            padding: 1vw 2vw 30vh 2vw;
+            z-index: 100;
+            top: -20vh;
+            padding-bottom: 30vh;
+        }
+
+        .image-container {
+            width: 30vw;
+            height: 18vw;
+            overflow: hidden;
+            border-radius: 25px;
+            border: 4px solid rgb(226, 254, 218);
+            flex-grow: 0;
+        }
+
+        .our-blogs {
+            font-size: 40px !important;
+            font-family: 'inter', sans-serif !important;
+            font-weight: 700 !important;
+            color: #ce4c07;
+            /* padding-left: 50px; */
+        }
+
+        .text-container {
+            width: 50vw;
+            padding-top: 10px;
+        }
+
+        .text-1 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            color: #52125d;
+            font-weight: 100 !important;
+        }
+
+        .text-2 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            color: rgb(0, 50, 0) !important;
+            font-weight: 400 !important;
+        }
+
+
+        .text-3 {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            color: rgb(0, 50, 0) !important;
+            font-weight: 200 !important;
+        }
+
+        .container-section-container {
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0);
+            backdrop-filter: blur(15px);
+            /* -webkit-backdrop-filter: blur(15px); */
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 2vh 5vw 2vh;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            /* justify-content: center;
+            align-items: center; */
+        }
+
+        .voilet {
+            color: #52125d;
+        }
+
+        .image-container-blog {
+            width: 100%;
+            height: 10vw;
+            overflow: hidden;
+            border-radius: 25px;
+        }
+
+        .card-blog {
+            width: 28vw;
+            /* height: 15vw; */
+            background: rgba(14, 43, 0, 0.3);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 1vw;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-ho {
+            object-position: center 45% !important;
+            object-fit: cover !important;
+        }
+
+        .triangle-container-2 {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            transform: translateY(-100%);
+            filter: drop-shadow(0 -15px 20px #94bb41);
+            z-index: 100;
+            clip-path: inset(-100% 0 0 0);
+        }
+
+        .triangle-2 {
+
+            width: 100% !important;
+            height: 100% !important;
+            background: url(/locationnbg.png);
+            clip-path: polygon(0% 100%, 0% 0%, 100% 80%, 100% 101%) !important;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .section-5 {
+            min-height: 70vh;
+            background: #94bb41;
+            z-index: 3;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .triangle-container-3 {
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            transform: translateY(-100%);
+            filter: drop-shadow(0 -15px 20px rgb(220, 255, 44));
+            z-index: 100;
+            clip-path: inset(-100% 0 0 0);
+        }
+
+        .triangle-3 {
+
+            width: 100% !important;
+            height: 100% !important;
+            background: #94bb41;
+            clip-path: polygon(0% 80%, 100% 0%, 100% 101%, 0% 101%) !important;
+        }
+
+        .images {
+            color: #ce4c07;
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+        }
+
+        .image-container-image {
+            width: 25vw;
+            overflow: hidden;
+            height: 14vw;
+            border: 2px solid #ccccccb6;
+            padding: 10px;
+            z-index: 4;
+            background-color: #94bb41;
+            border-radius: 10px;
+            /* opacity: 0.5; */
+        }
+
+        .image-section {
+            object-fit: cover !important;
+            object-position: center 60% !important;
+            border-radius: 10px;
+        }
+
+        .outline-1 {
+            inset: 0;
+            border: 2px solid #ccccccb6;
+            position: absolute;
+            transform: rotate(5deg) translateX(-5%);
+            z-index: -4;
+            background-color: #94bb41;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            /* opacity: 0.5; */
+        }
+
+        .outline-2 {
+            inset: 0;
+            border: 2px solid #ccccccb6;
+            position: absolute;
+            transform: rotate(-5deg) translateX(10%);
+            z-index: -3;
+            background-color: #94bb41;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            /* opacity: 0.5; */
+        }
+
+        .outline-3 {
+            inset: 0;
+            border: 2px solid #ccccccb6;
+            position: absolute;
+            transform: rotate(12deg) translateY(-10%);
+            z-index: -2;
+            background-color: #94bb41;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            /* opacity: 0.5; */
+        }
+
+        .outline-4 {
+            inset: 0;
+            border: 2px solid #ccccccb6;
+            position: absolute;
+            transform: rotate(-12deg) translateY(-5%);
+            z-index: -1;
+            background-color: #94bb41;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            /* opacity: 0.5; */
+        }
+
+        .menu-menu {
+            color: #00c03b;
+        }
+
+        .sdbchs {
+            height: max-content;
+        }
+
+        .our-photo-card {
+            padding: 5vw 0 5vw 0vw;
+            /* width:100%; */
+        }
+
+        .yelllow {
+            color: orangered;
+        }
+
+        .our-testimonials {
+            color: yellow;
+        }
+
+        .testimonials-cards-container{
+            width: 100%;
+            height: fit-content;
+        }
+
+        .card-testimonial {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            border: 2px solid green;
+            padding: 2vw;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            width:27%;
+        }
+
+        .profile-picture {
+           width: 20%;
+            /* height: auto; */
+            aspect-ratio: 1;
+            border-radius: 100%;
+            height: max-content;
+            overflow: hidden;
+            border: 1px solid black;
+            
+        }
+
+        .star-container{
+            display: flex !important;
+            flex-wrap: wrap;
+        }
+
+        .stars {
+            width: 27px;
+            height: 27px;
+            box-sizing: border-box;
+            /* margin-right: 5px; */
+            /* flex-wrap: wrap !important; */
+        }
+
+        .avatar {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center 0%;
+            aspect-ratio: 1;
+            /* object-position: center 0%; */
+            border-radius: 50%;
+        }
+
+        .g-logo {
+            width: 20px;
+            height: 20px;
+        }
+
+        .footer-section{
+            width: 100vw;
+            height: fit-content;
+            z-index: 100;
+        }
+
+        .wavy-image{
+            width: 100%;
+            height: auto;
+            transform:  rotate(180deg);
+        }
+
+        .wavy-image img{
+            width: 100%;
+            height: auto;
+        }
+
+        .footer-section{
+            z-index: 101;
+            background-color: #ffffff;
+        }
+
+        .footer-section .logo{
+            width: 300px;
+            margin: 20px;
+        }
+
+        .footer-contents{
+            display: grid;
+            grid-template-columns:repeat(5, 1fr);
+            gap: 20px;
+            grid-template-rows: 2;
+            grid-auto-flow: row;
+            /* margin: 0 auto; */
+            /* padding: 50px; */
+            /* text-align: center; */
+            /* align-items: center; */
+            justify-content: center;
+            padding: 20px 50px 50px 50px;
+        }
+
+        .footer-contents h2{
+            color: #3e3010;
+            font-weight: bolder;
+        } 
+
+        .footer-items h2{
+            color: #3e3010;
+            font-weight: bolder;
+        }
+
+        .footer-items ul li{
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .logo{
+            grid-column: 1/2;
+            grid-row:1/3;
+         }
+         .heading-footer{
+            display:none;
+         }
+
+         .footer-contents .logo{
+            padding: 0 !important;
+            margin: 0 !important;
+            align-self: center;
+         }
+
+         .footer-footer{
+            font-size: 18px;;
+         }
+
+
+.footer-items{
+    text-align: center;
+}
+
+ .footer-items ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+ }
+
+ @media (width<=851px) {
+    .dhc{
+        font-size: 20px !important;
+    }
+
+    .logo{
+        width: 100px !important;
+    }
+
+    .footer-contents{
+        gap: 10px;
+        padding: 20px
+    }
+ }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="d-flex w-100 justify-content-between nav-bar">
+
+        <div class="logo-container">
+            <img src="chiya-logo.png" class="logo" alt="Logo">
+        </div>
+
+        <div class="icons-container d-flex gap-3 align-items-center">
+            <img src="facebook.png" class="icons " alt="Facebook">
+            <img src="instagram.png" class="icons" alt="Instagram">
+            <svg viewBox="-0.5 0 25 25" style="width: 40px;" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M2 12.32H22" stroke="#00c03b" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M2 18.32H22" stroke="#00c03b" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    <path d="M2 6.32001H22" stroke="#00c03b" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </g>
+            </svg>
+            <p class=" align-self-center m-0 fs-3 menu-text menu-menu">Menu</p>
+        </div>
+    </nav>
+
+    <section class="position-sticky top-0 topcontainer">
+
+
+        <main class="position-relative main-container">
+
+
+            <video src="main-vido.mp4" class="main-video" autoplay loop muted></video>
+            <video src="./FirstBackgroundVideo2.mp4" class="main-video-2" autoplay loop muted></video>
+
+        </main>
+    </section>
+
+    <section class="position-sticky top-0 section-2 ">
+        <div class="position-relative d-flex section-2-ko-container ">
+            <div class="gradient"></div>
+            <img src="tea.png" width="50%" class="p-4 object-fit-contain tea-image" alt="Tea pic">
+
+            <div class="d-flex flex-column justify-content-center section-2-explanation w-50">
+                <p class="tea-header fw-bolder" style="font-size: 50px !important; line-height: 55px;">🌱 Our Story: The
+                    Journey of Chiyabagan</p>
+                <p class="text-exp">At Chiyabagan, everything begins with a cup of tea.
+
+                    Born out of a deep love for Nepali tea culture and the joy of sharing flavors, Chiyabagan started as
+                    a simple idea: bring people together over authentic tea and handcrafted snacks, served with heart.
+
+                    We are a team of passionate food lovers, storytellers, and community builders who believe that tea
+                    time is more than just a break — it's a moment of connection, comfort, and culture. Whether it is
+                    the first cup in the morning or a relaxing sip in the evening, we are here to make those moments
+                    richer.
+
+                </p>
+
+                <p class="text-exp mb-5">From sourcing quality tea leaves and creating delightful snack pairings to
+                    delivering freshness with a personal touch, We are proud to be a startup thatâ€™s rooted in
+                    tradition yet brewed for the future.
+
+                    As we grow, our mission remains simple: Serve warmth, one cup at a time. Join us on this flavorful
+                    journey — because every cup tells a story, and we are just getting started. — The Chiyabagan Team
+                </p>
+
+                <div class="button"> Read More</div>
+            </div>
+
+    </section>
+    <section class="position-sticky top-0 section-3">
+
+        <div class="triangle-container">
+            <div class="triangle">
+
+            </div>
+        </div>
+        <!-- <div class="gradient-2"></div> -->
+        <p class="text-center d-block our-best z-0 ">Our Best</p>
+        <div class="digitaltea d-flex align-items-center justify-content-center h-75 position-relative">
+            <img src="tealeaves.png" width="50%" class="position-absolute teacup z-0  " alt="tea leaves">
+            <div class="w-50 sdbchs position-relative d-flex justify-content-center align-items-center">
+
+                <img src="chiyapatti.png" width="13%" class="position-absolute z-3 chiyappati" alt="chiyapatti">
+                <img src="hola-kei.png" width="13%" class="position-absolute z-3 hola-kei " alt="hola-ni-tw-kei">
+                <img src="leaves.png" width="13%" class="position-absolute z-3 patta" alt="patta">
+                <img src="DigitalTea.png" width="80%" class="tea-cup z-2" alt="tea">
+            </div>
+        </div>
+        <!-- </div> -->
+
+    </section>
+
+    <section class="section-4 position-sticky z-3">
+
+        <div class="triangle-container-2">
+            <div class="triangle-2">
+
+            </div>
+        </div>
+
+        <div class="container-section-container">
+            <p class="our-blogs">Our Blogs</p>
+            <div class="blog-container d-flex gap-4">
+                <div class="image-container">
+                    <img src="img1.png" width="100%" alt="image-1">
+                </div>
+                <div class="text-container align-self-start d-flex flex-column g-0">
+                    <p class="text-1 mb-0 ">Lorem ipsum</p>
+                    <p class="text-2 fs-2 mt-0 mb-0"><span class="voilet">L</span>orem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Explicabo ea magnam omnis quos possimus quaerat eius iste autem accusantium
+                        dignissimos.</p>
+                    <p class="text-3 fs-4">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+
+            <div class="cards-container d-flex gap-2 justify-content-around mt-4">
+                <div class="card-blog d-flex flex-column justify-content-center align-items-center">
+                    <div class="image-container-blog">
+                        <img src="img3.webp" class="image-ho" alt="image-3" width="100%" height="100%">
+                    </div>
+
+                    <p class="mb-0 mt-3 align-self-start text-secondary">lorem ipsum</h4>
+                    <h4 class="text-light fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <p class="fs-6 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+                            autem.</p>
+                </div>
+
+                <div class="card-blog d-flex flex-column justify-content-center align-items-center">
+                    <div class="image-container-blog">
+                        <img src="img2.png" class="image-ho" alt="image-3" width="100%" height="100%">
+                    </div>
+
+                    <p class="mb-0 mt-3 align-self-start text-secondary">lorem ipsum</h4>
+                    <h4 class="text-light fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <p class="fs-6 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+                            autem.</p>
+                </div>
+
+                <div class="card-blog d-flex flex-column justify-content-center align-items-center">
+                    <div class="image-container-blog">
+                        <img src="img5.png" class="image-ho" alt="image-3" width="100%" height="100%">
+                    </div>
+
+                    <p class="mb-0 mt-3 align-self-start text-secondary">lorem ipsum</h4>
+                    <h4 class="text-light fw-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+                        <p class="fs-6 text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+                            autem.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section-5 position-sticky top-0">
+        <div class="triangle-container-3">
+            <div class="triangle-3">
+            </div>
+        </div>
+        <h1 class="text-center images mb-5"><span class="yellow">Chiya</span> Bagan <br> Photos</h1>
+
+        <div class="our-photo-card d-flex justify-content-around">
+            <div class="image-card-1 position-relative">
+                <div class="outline-1 position-absolute"></div>
+                <div class="outline-2 position-absolute"></div>
+                <div class="outline-3 position-absolute"></div>
+                <div class="outline-4 position-absolute"></div>
+                <div class="image-container-image">
+                    <img src="img2.png" class="image-section" alt="image" width="100%" height="100%">
+                </div>
+            </div>
+
+            <div class="image-card-1 position-relative">
+                <div class="outline-1  position-absolute"></div>
+                <div class="outline-2 position-absolute"></div>
+                <div class="outline-3 position-absolute"></div>
+                <div class="outline-4 position-absolute"></div>
+                <div class="image-container-image">
+                    <img src="img2.png" class="image-section" alt="image" width="100%" height="100%">
+                </div>
+            </div>
+
+            <div class="image-card-1 position-relative">
+                <div class="outline-1 position-absolute"></div>
+                <div class="outline-2 position-absolute"></div>
+                <div class="outline-3 position-absolute"></div>
+                <div class="outline-4 position-absolute"></div>
+                <div class="image-container-image">
+                    <img src="img2.png" class="image-section" alt="image" width="100%" height="100%">
+                </div>
+            </div>
+        </div>
+
+       
+
+        <h1 class="our-testimonials text-center mt-5"> <span class="yelllow">──────</span> Testimonials <span
+                class="yelllow">──────</span> </h1>
+
+        <h1 class="text-center"> <span class="yellow">What our</span> <span class="yelllow">Clients say</span></h1>
+
+        <div class="testimonials-cards-container d-flex justify-content-around mt-4  pb-5">
+            <div class="card-testimonial">
+                <div class="card-header w-100 d-flex align-items-start gap-4">
+                    <div class="profile-picture">
+                        <img src="./202510140739contact-img.png" class="avatar">
+                    </div>
+                    <div class="info d-flex flex-column justify-content-start align-top">
+                        <h3>Dipti KC</h3>
+                        <h5>Banker</h5>
+                    </div>
+                </div>
+                <p>best tea cafe in Butwal for gossip, awesome ambience with organic food.</p>
+                <div class="footer-card d-flex justify-content-between align-items-center">
+                    <div class="star-container d-flex ">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                    </div>
+
+                    <div class="source d-flex align-items-center justify-content-center gap-2">
+                        <img src="./google-color-svgrepo-com.svg" class="g-logo" alt="Google">
+                        <p class="m-0">(Google review)</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card-testimonial">
+                <div class="card-header w-100 d-flex gap-4">
+                    <div class="profile-picture">
+                        <img src="./202510140734475849489_1161639785971097_8247405259518015973_n.png" class="avatar">
+                    </div>
+                    <div class="info d-flex flex-column justify-content-start align-top">
+                        <h3>Kamal Neupane</h3>
+                        <h5>IT Professional</h5>
+                    </div>
+                </div>
+                <p>best tea cafe in Butwal for gossip, awesome ambience with organic food.</p>
+                <div class="footer-card d-flex justify-content-between align-items-center">
+                    <div class="star-container d-flex">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                    </div>
+
+                    <div class="source d-flex align-items-center justify-content-center gap-2">
+                        <img src="./google-color-svgrepo-com.svg" class="g-logo" alt="Google">
+                        <p class="m-0">(Google review)</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="card-testimonial">
+                <div class="card-header w-100 d-flex align-items-start gap-4">
+                    <div class="profile-picture">
+                        <img src="./202510140723pngwing.com (3).png" class="avatar">
+                    </div>
+                    <div class="info d-flex flex-column justify-content-start align-top">
+                        <h3>Samira Karki</h3>
+                    <h5>Consultancy Owner</h5>
+                    </div>
+                </div>
+                <p>best tea cafe in Butwal for gossip, awesome ambience with organic food.</p>
+                <div class="footer-card d-flex justify-content-between align-items-center">
+                    <div class="star-container d-flex">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                        <img src="./star-svgrepo-com.svg" class="stars" alt="star">
+                    </div>
+
+                    <div class="source d-flex align-items-center justify-content-center gap-2">
+                        <img src="./google-color-svgrepo-com.svg" class="g-logo" alt="Google">
+                        <p class="m-0">(Google review)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <footer class="footer-section top-0">
+
+
+
+        <div class="wavy-image top-0">
+            <img src="wave.png" alt="wavy image">
+        </div>
+       
+        <div class="footer-contents">
+        <div class="logo">
+            <img src="chiya-logo.png" class="logo" alt="Logo">
+        </div>
+        <h2 class="dhc text-center">About Us</h2>
+        <h2 class="dhc text-center">Our Products</h2>
+        <h2 class="dhc text-center">Our Collections</h2>
+        <h2 class="dhc text-center">Contact Us</h2>
+             
+            <div class="footer-items">
+               <h2 class="heading-footer">About Us</h2>
+               <ul>
+                <li>Our Story</li>
+                <li>Get in touch</li>
+               </ul>
+               </div>
+              
+               <div class="footer-items">
+              <h2 class="heading-footer">Our Products</h2>
+               <ul>
+                <li>Green Tea</li>
+                <li>Black Tea</li>
+                <li>Milk Tea</li>
+                <li>Oolong Tea</li>
+                <li>Herbal Tea</li>
+                <li>New Release</li>
+               </ul>
+               </div>
+               
+               <div class="footer-items">
+              <h2 class="heading-footer">Our Collections</h2>
+               <ul>
+                <li>Our complete Blogs</li>
+                <li>Our Photo Collections</li>
+               </ul>
+               </div>
+                
+               <div class="footer-items">
+                <h2 class="heading-footer">Contact Us</h2>
+               <ul>
+                <li>980-7440817</li>
+                <li>Bhagwati Tole, Butwal</li>
+                <li>info@chiyabagan.com</li>
+               </ul>
+              
+               <div class="info-icons d-flex flex-wrap gap-3 justify-content-center mt-2">
+                <img src="facebook.png" width="25px" alt="Facebook">
+                <img src="instagram.png" width="25px" alt="Facebook">
+                <img src="tiktok.png" width="25px" alt="Facebook">
+                <img src="message.png" width="25px" alt="Facebook">
+               </div>
+               
+        </div>
+        </div>
+
+        <p class="text-center footer-footer">Chiya Bagan. Â©2025. All Rights Reserved.</p>
+
+        <!-- asdsfdsf -->
+    </footer>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
